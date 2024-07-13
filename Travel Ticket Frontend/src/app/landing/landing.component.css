@@ -1,0 +1,22 @@
+.carousel-caption h5 {
+    font-size: 24px; /* Font size for heading */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    /* border-top: 2px solid #fff; White border on top */
+    border-radius: 0 0 5px 10px; /* Ro
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.carousel-caption p {
+    font-size: 16px; /* Font size for paragraph */
+    margin-bottom: 0; /* Remove bottom margin */
+    line-height: 1.5; /* Line height for better readability */
+}
+ .header{
+    display: none ;
+    
+
+}
+.app-root .header {
+    display: none !important; /* Using !important to ensure it overrides other styles */
+  }

@@ -1,0 +1,36 @@
+<div class="con">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login</h1>
+                </div>
+                <form (ngSubmit)="onSubmit(loginEmail.value,loginPasssword.value)">
+                    <!-- <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <label class="input-group-text" for="inputGroupSelect01">Role</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                          <option selected>Choose...</option>
+                          <option value="1">User</option>
+                          <option value="2">Provider</option>
+                          <option value="3">Admin</option>
+                        </select>
+                      </div> -->
+                      
+                        <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input  #loginEmail type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input #loginPasssword type="password" class="form-control" id="exampleInputPassword1" >
+                        </div>
+                        <button type="submit" class="btn btn-success">Login</button>
+                    </form>
+                    <a style="color: #090909;margin-top: 10px;" routerLink="/joinus">New User? Click to Sign Up</a>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="wrapper-space">
+  <div class="container-fluid">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Booking Details</h2>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+    <div class="panel-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Id</th>
+            <th>FullName</th>
+            <th>MobileNumber</th>
+            <th>Email</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>ArrivalDate</th>
+            <th>DepartureDate</th>
+            <th>TrainName</th>
+            <th>TrainFare</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{booking.id}}</td>
+            <td>{{booking.fullName}}</td>
+            <td>{{booking.mobile}}</td>
+            <td>{{booking.email}}</td>
+             <td>{{booking.train.source}}</td>
+            <td>{{booking.train.destination}}</td>
+            <td>{{booking.train.arrivalDate}}</td>
+            <td>{{booking.train.departureDate}}</td>
+            <td>{{booking.train.trainName}}</td>
+            <td>{{booking.train.trainFare}}</td>
+          <td> <button (click)="onPrint()" class=" btn btn-sm btn-success ">Print</button></td>
+          <td> <button *ngIf="booking" (click)="onUpdate()" class="btn btn-sm btn-primary">Update Booking</button></td>
+
+            
+
+            </tr>
+        </tbody>
+      </table>
+
+    </div>
+    </form>
+    </div>
+    </div>

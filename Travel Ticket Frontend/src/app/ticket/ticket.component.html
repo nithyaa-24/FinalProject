@@ -1,0 +1,88 @@
+
+<div class="wrapper my-4 ">
+  <form (ngSubmit)="onSubmit(source.value,destination.value,arrivalDate.value,departureDate.value)">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="fromInput">Source</label>
+          <input
+            #source
+            type="text"
+            required
+            placeholder="From"
+            id="fromInput"
+            class="form-control"
+          />
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="toInput">Destination</label>
+          <input
+            #destination
+            type="text"
+            required
+            placeholder="To"
+            id="toInput"
+            class="form-control"
+          />
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+      </div>
+      
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+    <div class="form-group">
+      <label for="fromDate" >From Date</label>
+      <input
+        #arrivalDate
+        type="date"
+        required
+        placeholder="From Date"
+        id="fromDate"
+        class="form-control"
+      />
+      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    </div>
+    <div class="col-sm-6">
+    <div class="form-group">
+      <label for="returnDate">Return Date</label>
+      <input
+        #departureDate
+        type="date"
+        required
+        placeholder="Return Date"
+        id="returnDate"
+        class="form-control"
+      />
+      <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+    </div>
+    </div>
+    </div>
+    <!-- <div class="form-group">
+      <label for="travellers">Traveller(s)</label>
+      <input
+        #travellers
+        type="number"
+        required
+        placeholder="Traveller(s)"
+        id="travellers"
+        class="form-control"
+      />
+    </div> -->
+    <div class="form-group my-3">
+      <!-- <button type="button"  routerLink="search" 
+        class="btn btn-primary rounded-0 d-flex justify-content-center text-center mb-3 p-3"
+      >
+        Search 
+        <app-searchticket></app-searchticket>
+      </button> -->
+      <button type="submit" class="btn btn-success btn-black">Search</button>
+      
+    </div>
+    <!-- console.log("hail"); -->
+  </form>
+</div>

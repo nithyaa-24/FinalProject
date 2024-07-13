@@ -1,0 +1,40 @@
+<div class="wrapper-space">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Trains List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Train Name</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Arrival Date</th>
+            <th>Departure Date</th>
+            <th>Train Fare</th>
+            <th>Actions</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let train of trains">
+            <td>{{ train.trainName }}</td>
+            <td>{{ train.source }}</td>
+            <td>{{ train.destination }}</td>
+            <td>{{ train.arrivalDate }}</td>
+            <td>{{ train.departureDate }}</td>
+            <td>{{ train.trainFare }}</td>
+            <td>
+            <button (click)="deleteTrain(train.id)" class="btn btn-danger">Delete</button>
+            
+            
+                <button (click)="updateTrain(train.id)" style="margin-left: 10px" class="btn btn-info">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  

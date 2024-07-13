@@ -1,0 +1,39 @@
+<div class="wrapper-space">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2>Buses List</h2>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th>Bus Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Arrival Date</th>
+                <th>Departure Date</th>
+                <th>Bus Fare</th>
+                <th>Actions</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let bus of buses">
+                <td>{{ bus.busName }}</td>
+                <td>{{ bus.source }}</td>
+                <td>{{ bus.destination }}</td>
+                <td>{{ bus.arrivalDate }}</td>
+                <td>{{ bus.departureDate }}</td>
+                <td>{{ bus.busFare }}</td>
+                <td>
+                <button (click)="deleteBus(bus.id)" class="btn btn-danger">Delete</button>
+                
+                
+                    <button (click)="updateBus(bus.id)" style="margin-left: 10px" class="btn btn-info">Update</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
